@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+html{
+    background: #bcbbbb;
+}
+
+body {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #303030;
+}
+
+.conn{
+    width: 500px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 0 50px 0 50px;
+    background: white;
+}
+  
+.conn > h1 {
+    font-weight: 500;
+}
+
+.conn > p {
+    font-weight: 300;
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 83px;
+    margin-top: 25px;
+}
+  
+form div > label {
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+  
+form div > input, form div > select, form div > textarea {
+    background: #33396c;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+    color: white;
+
+}
+  
+form div > input, form div > select {
+    height: 50px;
+    padding-left: 10px;
+}
+  
+form div > input::placeholder, form div > textarea::placeholder {
+    color: white;
+    opacity: 50%;
+}
+  
+form div > select:invalid {
+    color: white;
+}
+  
+form div > select option {
+    background: white;
+    color: #303030;
+}
+  
+form div:last-child {
+    align-items:center;
+    margin-top: 20px;
+}
+  
+.conn form button {
+    width: 450px;
+    max-width: 500px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 28px;
+    background: white;
+    border: rgba(48, 48, 48, 0.5) solid 1px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    color: #303030;
+}
+
+.bp{
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: 0 0;
+    padding: 8px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+    font-weight: 800;
+    font-size: 16px;
+    height: 40px;
+}
+
+.bp-general form {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+button{
+    width: 150px;
+}
+
+.bp-general{
+    width: 10%;
+    display: flex;
+    margin-right: 20px;
+    margin-left: -100px;
+}
+
+.bp-general form:hover {
+    color: #ffffff;
+}
+
+.bp:hover{
+    background-color: #ffffff;
+    color: #33396c;
+}

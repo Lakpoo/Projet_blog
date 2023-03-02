@@ -11,3 +11,4 @@ $query = $dbh->prepare("DELETE FROM post_blog WHERE id_post = ?");
 $query->execute([$_POST['id_post']]);
 
 header('location: ../pages/admin.php');
+?>

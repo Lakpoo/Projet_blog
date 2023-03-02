@@ -1,5 +1,5 @@
 <?php   
-require '../auth/adminCheck.php';
+require_once '../auth/adminCheck.php';
 require 'template/header-conn-temp.php';
 ?>
 <style>

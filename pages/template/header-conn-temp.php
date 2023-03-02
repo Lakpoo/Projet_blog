@@ -18,7 +18,7 @@
             <nav class="navMenu">
                 <a class="home" href="/pages/index.php">Home</a>
                 <a class="workspace" href="/pages/workspace/workspace.php">Workspace</a>
-                <a class="Compte" href="../auth/adminCheck.php">Admin</a>
+                <a class="Compte" href="../../auth/adminCheck.php">Admin</a>
                 <div class="dot"></div>
             </nav>
         </div>

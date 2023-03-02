@@ -244,15 +244,11 @@ header{
     margin: 0;
 }
 
-.btn-suppr > form{
+.bpdel{
     border-radius: 8px;
     border: none;
     background: rgba(255, 69, 69, 0.800);
     margin-top: 20px;
     height: 30px;
-    width: 30px;
-}
-
-.bpdel{
     width: 30px;
 }

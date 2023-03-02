@@ -30,3 +30,5 @@ if ($user) {
     $_SESSION['error-connection'] = "L'email ou le mot de passe est incorrect";
     header('location: ../connexion/connexion.php');
 }
+
+?>

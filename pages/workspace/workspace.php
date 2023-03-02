@@ -27,7 +27,7 @@ require '../template/header-conn-temp.php';
                 </form>
             </div>
             <div class="affichage-post">
-                <?php //require '../template/user-post.php'; ?>
+                <?php require '../template/user-post.php'; ?>
             </div>
         </div>
     </div>

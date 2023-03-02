@@ -169,6 +169,7 @@ button{
     width: 25%;
     height: 100px;
     text-align: center;
+    display: flex;
 }
 
 .middle-menu{

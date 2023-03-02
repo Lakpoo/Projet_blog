@@ -1,13 +1,10 @@
 <?php   
-require_once '../auth/adminCheck.php';
 require 'template/header-conn-temp.php';
+//require_once '../auth/adminCheck.php';
 ?>
 <style>
     .bp-general{
         width: 0px;
-    }
-    .nav-left{
-        width: 55%;
     }
 </style>
 

@@ -166,6 +166,7 @@ header{
 }
 
 .left-menu{
+    display: flex;
     width: 25%;
     height: 100px;
     text-align: center;

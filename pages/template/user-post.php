@@ -9,9 +9,10 @@ try {
 // Requete SQL : SELECT id_post, id_post, title, contenue, log FROM exo_conn.post_blog ORDER BY post_blog.id_post DESC;
 
     session_start();
-    $id_user = $_SESSION['id_user'];
-    $query = $dbh->query('SELECT id_post, id_user, title, contenue, log FROM post_blog WHERE id_user = ?');
-    $query->execute([$_SESSION['id_post']]);
+    $_POST['id_user'] = $_SESSION['id_user'];
+    $id_user = $_POST['id_user'];
+    $query = $dbh->prepare('SELECT id_post, id_user, title, contenue, log FROM post_blog WHERE id_user = :id_user');
+    $query->bindParam(':id_user', $id_user, PDO::PARAM_INT);
     $donnees = $query->fetchAll();
     foreach ($donnees as $article): ?>
         <div class="post">

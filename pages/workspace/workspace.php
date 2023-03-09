@@ -21,7 +21,7 @@ require '../template/header-conn-temp.php';
                     <div class="textarea-contenue">
                         <textarea type="text" name="contenue" id="contenue" placeholder="Contenu de votre post" required class="textarea"></textarea>
                     </div>
-                    <div>
+                    <div class="bp-submit">
                         <button type="submit">Poster</button>
                     </div>
                 </form>

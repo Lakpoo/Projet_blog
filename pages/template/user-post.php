@@ -11,9 +11,11 @@ try {
     session_start();
     $_POST['id_user'] = $_SESSION['id_user'];
     $id_user = $_POST['id_user'];
-    $query = $dbh->prepare('SELECT id_post, id_user, title, contenue, log FROM post_blog WHERE id_user = :id_user');
-    $query->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+    $query = $dbh->prepare('SELECT id_post, id_user, title, contenue, log FROM post_blog WHERE id_user = ? ORDER BY log DESC');
+    $query->bindParam(1, $id_user, PDO::PARAM_INT);
+    $query->execute();
     $donnees = $query->fetchAll();
+
     foreach ($donnees as $article): ?>
         <div class="post">
             <div class="head-post">

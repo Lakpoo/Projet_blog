@@ -265,3 +265,69 @@ form div:last-child {
     background-color: #33396c;
     color: #fff;
 }
+
+.post{
+    display: block;
+    height: 250px;
+    width: 600px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    background: #efefef;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 2px 4px 0px, rgba(0, 0, 0, 0.10) 0px 1px 1.5px 0px;
+
+}
+
+.title{
+    width: 80%;
+    padding-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenue{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    height: 130px;
+    margin: 20px;
+}
+
+.time{
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 0px;
+    margin-left: 125px;
+}
+
+.btn-suppr{
+    width: 20%;
+}
+
+.head-post{
+    display: flex;
+}
+
+.footer-post{
+    display: flex;
+}
+
+.auteur{
+    text-align: start;
+    font-family: "Montserrat", sans-serif;
+    width: 40%;
+    margin-left: 35px;
+}
+
+.auteur > p{
+    margin: 0;
+}
+
+.bpdel{
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 69, 69, 0.800);
+    margin-top: 20px;
+    height: 30px;
+    width: 30px;
+}

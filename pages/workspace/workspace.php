@@ -3,11 +3,6 @@ require '../template/header-conn-temp.php';
 ?>
 
 <div class="menu">
-    <div class="left-menu">
-        <div class="compteur-post">
-            <!-- <p>Compteur article : </p> -->
-        </div>
-    </div>
     <div class="middle-menu">
         <div class="create-tab">
             <div class="title-workspace">
@@ -26,14 +21,11 @@ require '../template/header-conn-temp.php';
                     </div>
                 </form>
             </div>
-            <div class="affichage-post">
-                <?php require '../template/user-post.php'; ?>
-            </div>
         </div>
     </div>
-    <div class="right-menu">
-
-    </div>
+        <div class="affichage-post">
+            <?php require '../template/user-post.php'; ?>
+        </div>
 </div>
 
 <?php

@@ -11,7 +11,7 @@ try {
     session_start();
     $_POST['id_user'] = $_SESSION['id_user'];
     $id_user = $_POST['id_user'];
-    $query = $dbh->prepare('SELECT id_post, id_user, title, contenue, log FROM post_blog WHERE id_user = ? ORDER BY log DESC');
+    $query = $dbh->prepare('SELECT id_post, id_user, title, contenue, auteur, log FROM post_blog WHERE id_user = ? ORDER BY log DESC');
     $query->bindParam(1, $id_user, PDO::PARAM_INT);
     $query->execute();
     $donnees = $query->fetchAll();
@@ -23,9 +23,9 @@ try {
                     <?php echo $article['title'];?>
                 </div>
                 <div class="btn-suppr">
-                    <form action="../../auth/deleteRaw2.php" method="post">
+                    <form action="../../auth/deleteRawUser.php" method="post">
                         <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
-                        <button type="submit" class="bpdel"><img src="../image/bin.png" alt="Submit" style="height: 15px;"></button>
+                        <button type="submit" class="bpdel"><img src="../../image/bin.png" alt="Submit" style="height: 15px;"></button>
                     </form>
                 </div>
             </div>

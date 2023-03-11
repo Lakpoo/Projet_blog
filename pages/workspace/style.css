@@ -164,24 +164,12 @@ button{
     display: flex;
 }
 
-.left-menu{
-    margin-left: 20px;
-    width: 25%;
-    height: 100px;
-}
-
 .middle-menu{
-    width: 50%;
+    margin-left: 80px;
+    width: 40%;
     text-align: center;
     display: -webkit-inline-box;
     font-family: "Montserrat", sans-serif;
-}
-
-.right-menu{
-    width: 25%;
-    margin-right: 20px;
-    height: 100px;
-    text-align: right;
 }
 
 form div {
@@ -269,7 +257,7 @@ form div:last-child {
     display: block;
     height: 250px;
     width: 600px;
-    margin-left: 400px;
+    margin-left: 80px;
     margin-bottom: 30px;
     border-radius: 30px;
     background: #efefef;

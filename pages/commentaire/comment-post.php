@@ -30,7 +30,6 @@ require '../template/header-conn-temp.php';
             <div class="footer-post">
                 <div class="auteur">
                     <p>Writter by : <?php echo $article['auteur'] ?></p>
-                    
                 </div>
                 <div class="time">
                     <?php echo gmdate("d-m-Y H:i:s", ($article['log'] + 3600));?>
@@ -47,6 +46,27 @@ require '../template/header-conn-temp.php';
             </div>
         </form>
     </div>
+    <?php
+    $id_post = $_POST['id_post'];
+    $requete = $dbh->prepare('SELECT id_user, id_post, auteur, contenue, log FROM commentaire_post WHERE id_post = ? ORDER BY log DESC');
+    $requete->bindParam(1, $id_post, PDO::PARAM_INT);
+    $requete->execute();
+    $commentaire = $requete->fetchAll();
+    foreach ($commentaire as $com): ?>
+        <div class="com">
+            <div class="contenue-com">
+                <?php echo $com['contenue'] ?>
+            </div>
+            <div class="footer-com">
+                <div class="auteur">
+                    <p>Writter by : <?php echo $com['auteur'] ?></p>
+                </div>
+                <div class="time">
+                    <?php echo gmdate("d-m-Y H:i:s", ($com['log'] + 3600));?>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
 <?php
 require '../template/footer-temp.php';
 ?>

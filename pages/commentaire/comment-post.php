@@ -1,15 +1,15 @@
 <?php
+session_start();
+if (!isset($_SESSION['id_user'])) {
+    header('location: /connexion/connexion.php');
+}
+
 //connexion bdd
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=exo_conn', 'root', 'password');
 } catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
-}
-
-session_start();
-if ($_SESSION['is-connected'] = false) {
-    header('location: /connexion/connexion.php');
 }
 
 require '../template/header-conn-temp.php';
@@ -39,12 +39,10 @@ require '../template/header-conn-temp.php';
         </div>
     <?php endforeach; ?>
     <div class="commentaire-input">
-        <div>
-            <form action="" method="post">
-                <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
-                <input type="text" name="commentaire" id="commentaire" placeholder="Commentaire" required>
-            </form>
-        </div>
+        <form action="" method="post">
+            <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
+            <input type="text" name="commentaire" id="commentaire" placeholder="Commentaire" required>
+        </form>
     </div>
 <?php
 require '../template/footer-temp.php';

@@ -23,7 +23,7 @@ try {
                     <?php echo $article['title'];?>
                 </div>
                 <div class="btn-suppr">
-                    <form action="../../auth/deleteRawUser.php" method="post">
+                    <form action="../../auth/delete.php" method="post">
                         <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
                         <button type="submit" class="bpdel"><img src="../../image/bin.png" alt="Submit" style="height: 15px;"></button>
                     </form>

@@ -12,7 +12,7 @@
     <div class="main">
         <header>
         <div class="nav-left">
-            <a class="text-logo" href="http://localhost/pages/index.php">BLOG</a>
+            <a class="text-logo" href="http://localhost">BLOG</a>
         </div>
         <div class="nav-right">
             <nav class="navMenu">

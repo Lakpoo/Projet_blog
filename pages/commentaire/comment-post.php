@@ -13,7 +13,7 @@ if ($_SESSION['is-connected'] = false) {
 }
 
 require '../template/header-conn-temp.php';
-    
+
     $query = $dbh->prepare('SELECT id_post, id_user, title, contenue, auteur, log FROM post_blog WHERE id_post = ?');
     $query->execute([$_POST['id_post']]);
     $donnees = $query->fetchAll();

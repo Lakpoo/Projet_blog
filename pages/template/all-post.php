@@ -26,7 +26,7 @@ try {
                     <p>Writter by : <?php echo $article['auteur'] ?></p>
                 </div>
                 <div class="commentaire">
-                    <form action="/pages/commentaire/comment-post.php">
+                    <form action="/pages/commentaire/comment-post.php" method="post">
                         <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
                         <button>Commenter</button>
                     </form>

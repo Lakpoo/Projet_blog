@@ -39,7 +39,7 @@ require '../template/header-conn-temp.php';
         </div>
     <?php endforeach; ?>
     <div class="commentaire-input">
-        <form action="" method="post">
+        <form action="send-comment-post.php" method="post">
             <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
             <input type="text" name="commentaire" id="commentaire" placeholder="Commentaire" style="background: #33396c;" required>
             <div class="bp-submit">

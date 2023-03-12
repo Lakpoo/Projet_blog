@@ -13,25 +13,23 @@ $auteur  = $_SESSION['prenom'];
 $id_user = $_SESSION['id_user'];
 $dp = $_SESSION['degre_privilege'];
 $dt = time();
-$query = $dbh->prepare('INSERT INTO post_blog (id_user, title, contenue, auteur, log) VALUES (:id_user, :title, :contenue, :auteur, :log);');
+$query = $dbh->prepare('INSERT INTO commentaire_post (id_user, auteur, contenue, log) VALUES (:id_user, :auteur, :contenue, :log);');
 if($dp == 1){//admin
     $query->execute([
         'id_user' => $id_user, // Insersion de l'id_user recupere du compte connecte
-        'title' => $_POST['title'],
-        'contenue' => $_POST['contenue'],
         'auteur' => $auteur,
+        'contenue' => $_POST['contenue'],
         'log' => $dt, //Conversion du time() en format français
     ]);
 }elseif($dp == 2){//user normal 
     $query->execute([
         'id_user' => $id_user, // Insersion de l'id_user recupere du compte connecte
-        'title' => $_POST['title'],
-        'contenue' => $_POST['contenue'],
         'auteur' => $auteur,
+        'contenue' => $_POST['commentaire'],
         'log' => $dt, //Conversion du time() en format français
     ]);    
 }
 
 // Redirection
-//header("location: ../pages/commentaire/comment-post.php");
+header("location: /pages/index.php");
 ?>

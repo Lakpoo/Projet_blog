@@ -38,7 +38,14 @@ require '../template/header-conn-temp.php';
             </div>
         </div>
     <?php endforeach; ?>
-
+    <div class="commentaire-input">
+        <div>
+            <form action="" method="post">
+                <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
+                <input type="text" name="commentaire" id="commentaire" placeholder="Commentaire" required>
+            </form>
+        </div>
+    </div>
 <?php
 require '../template/footer-temp.php';
 ?>

@@ -41,7 +41,10 @@ require '../template/header-conn-temp.php';
     <div class="commentaire-input">
         <form action="" method="post">
             <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
-            <input type="text" name="commentaire" id="commentaire" placeholder="Commentaire" required>
+            <input type="text" name="commentaire" id="commentaire" placeholder="Commentaire" style="background: #33396c;" required>
+            <div class="bp-submit">
+                <button type="submit">Poster</button>
+            </div>
         </form>
     </div>
 <?php

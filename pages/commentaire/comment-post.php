@@ -58,10 +58,10 @@ require '../template/header-conn-temp.php';
                 <?php echo $com['contenue'] ?>
             </div>
             <div class="footer-com">
-                <div class="auteur">
+                <div class="auteur-com">
                     <p>Writter by : <?php echo $com['auteur'] ?></p>
                 </div>
-                <div class="time">
+                <div class="time-com">
                     <?php echo gmdate("d-m-Y H:i:s", ($com['log'] + 3600));?>
                 </div>
             </div>

@@ -316,3 +316,35 @@ header{
     background-color: #33396c;
     color: #fff;
 }
+
+.com{
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    height: 100px;
+    width: 600px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    background: #efefef;
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 2px 4px 0px, rgba(0, 0, 0, 0.10) 0px 1px 1.5px 0px;
+}
+
+.contenue-com{
+    height: 40%;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.footer-com{
+    display: flex;
+    justify-content: space-between;
+}
+
+.auteur-com{
+    margin-left: 20px;
+}
+
+.time-com{
+    margin: 16px;
+}
+

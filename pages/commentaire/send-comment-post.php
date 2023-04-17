@@ -19,7 +19,7 @@ if($dp == 1){//admin
         'id_user' => $id_user, // Insersion de l'id_user recupere du compte connecte
         'id_post' => $_POST['id_post'],
         'auteur' => $auteur,
-        'contenue' => $_POST['contenue'],
+        'contenue' => $_POST['commentaire'],
         'log' => $dt, 
     ]);
 }elseif($dp == 2){//user normal 

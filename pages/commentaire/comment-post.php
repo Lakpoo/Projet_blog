@@ -54,8 +54,18 @@ require '../template/header-conn-temp.php';
     $commentaire = $requete->fetchAll();
     foreach ($commentaire as $com): ?>
         <div class="com">
-            <div class="contenue-com">
-                <?php echo $com['contenue'] ?>
+            <div class="header-com">
+                <div class="contenue-com">
+                    <?php echo $com['contenue'] ?>
+                </div>
+                <?php if($com['id_user'] == $_SESSION['id_user']):?>
+                    <div class="btn-suppr">
+                        <form action="../../auth/delete_com.php" method="post">
+                            <input type="text" name="contenue" value="<?= $com['contenue'] ?>" hidden>
+                            <button type="submit" class="bpdel"><img src="../../image/bin.png" alt="Submit" style="height: 15px;"></button>
+                        </form>
+                    </div>
+                <?php endif ; ?>
             </div>
             <div class="footer-com">
                 <div class="auteur-com">

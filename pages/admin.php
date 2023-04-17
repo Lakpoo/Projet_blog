@@ -1,6 +1,5 @@
 <?php   
 require 'template/header-conn-temp.php';
-//require_once '../auth/adminCheck.php';
 ?>
 <style>
     .bp-general{
@@ -11,15 +10,19 @@ require 'template/header-conn-temp.php';
 <div>
 <?php
 //connexion bdd
-try {
-    $dbh = new PDO('mysql:host=localhost;dbname=exo_conn', 'root', 'password');
-} catch (PDOException $e) {
-    print "Erreur !: " . $e->getMessage() . "<br/>";
-    die();
+session_start();
+if ($_SESSION['degre_privilege'] == 1) {
+    try {
+        $dbh = new PDO('mysql:host=localhost;dbname=exo_conn', 'root', 'password');
+    } catch (PDOException $e) {
+        print "Erreur !: " . $e->getMessage() . "<br/>";
+        die();
+    }
 }
 // Requete SQL : SELECT id_post, id_post, title, contenue, log FROM exo_conn.post_blog ORDER BY post_blog.id_post DESC;
 ?>
 <?php
+if ($_SESSION['degre_privilege'] == 1) {
     $query = $dbh->query('SELECT id_post, id_user, title, contenue, auteur, log FROM post_blog ORDER BY id_post DESC;');
     $donnees = $query->fetchAll();
     foreach ($donnees as $article): ?>
@@ -47,9 +50,13 @@ try {
                 </div>
             </div>
         </div>
-    <?php endforeach; ?>
-</div>
-
+    <?php endforeach; 
+} 
+else
+{
+    echo("Ne cherchez pas de faille sur mon blog ! (tu n'aura pas acces à l'admin)");
+}?>
+    
 <?php
 require 'template/footer-temp.php';
 ?>

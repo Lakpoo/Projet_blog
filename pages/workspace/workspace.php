@@ -28,6 +28,4 @@ require '../template/header-conn-temp.php';
         </div>
 </div>
 
-<?php
-require '../template/footer-temp.php'; 
-?>
+<?php require '../template/footer-temp.php'; ?>

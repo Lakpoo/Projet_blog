@@ -40,7 +40,7 @@ require '../template/header-conn-temp.php';
     <div class="commentaire-input">
         <form action="send-comment-post.php" method="post">
             <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
-            <input type="text" name="commentaire" id="commentaire" placeholder="Commentaire" style="background: #33396c;" required>
+            <input type="text" name="commentaire" id="commentaire" placeholder="Commentaire" style="background: #33396c;" required autocomplete="off">
             <div class="bp-submit">
                 <button type="submit">Poster</button>
             </div>

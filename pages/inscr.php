@@ -20,19 +20,19 @@
         <form action="../auth/inscr.php" method="post">
           <div>
             <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Nom" required>
+            <input type="text" id="nom" name="nom" placeholder="Nom" required autocomplete="off">
           </div>
           <div>
             <label for="prenom">Prenom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Prenom" required>
+            <input type="text" id="prenom" name="prenom" placeholder="Prenom" required autocomplete="off">
           </div>
           <div>
             <label for="email">Adresse mail</label>
-            <input type="text" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="email" name="email" placeholder="Email" required autocomplete="off">
           </div>
           <div>
             <label for="password">Mot de passe</label>
-            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            <input type="password" id="password" name="password" placeholder="Mot de passe" required autocomplete="off">
           </div>
           <div>
             <button type="submit">S'inscrire</button>
@@ -43,7 +43,6 @@
         <div class="bp-conn">
           <form action="..\connexion\connexion.php" method="post"><button class="bp">Connexion</button></form>
         </div>
-        
       </div>
     </div>
 </body>

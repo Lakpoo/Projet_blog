@@ -58,7 +58,7 @@ require '../template/header-conn-temp.php';
                 <div class="contenue-com">
                     <?php echo $com['contenue'] ?>
                 </div>
-                <?php if($com['id_user'] == $_SESSION['id_user']):?>
+                <?php if($com['id_user'] == $_SESSION['id_user'] or $_SESSION['degre_privilege'] == 1):?>
                     <div class="btn-suppr">
                         <form action="../../auth/delete_com.php" method="post">
                             <input type="text" name="contenue" value="<?= $com['contenue'] ?>" hidden>

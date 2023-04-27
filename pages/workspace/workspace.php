@@ -12,7 +12,7 @@ require '../template/header-conn-temp.php';
                 <form action="../../auth/post-blog.php" method="POST">
                     <div>
                         <input type="title" name="title" id="title" placeholder="Titre" required autocomplete="off">
-                    </div>  
+                    </div>
                     <div class="textarea-contenue">
                         <textarea type="text" name="contenue" id="contenue" placeholder="Contenu de votre post" required class="textarea" autocomplete="off"></textarea>
                     </div>

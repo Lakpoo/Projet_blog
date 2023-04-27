@@ -19,6 +19,14 @@ try {
     foreach ($donnees as $article): ?>
         <div class="post">
             <div class="head-post">
+                <div class="form-modif">
+                    <form action="../workspace/workspace.php" methode="post">
+                        <input type="text" name="id_post" value="<?= $article['id_post'] ?>" hidden>
+                        <input type="text" name="title" value="<?= $article['title'] ?>" hidden>
+                        <input type="text" name="contenue" value="<?= $article['contenue'] ?>" hidden>
+                        <button type="submit" class="bp-modif">Modifier</button>
+                    </form>
+                </div>  
                 <div class="title">
                     <?php echo $article['title'];?>
                 </div>

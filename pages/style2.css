@@ -46,6 +46,7 @@ form div > input, form div > select, form div > textarea {
 form div > input, form div > select {
     height: 50px;
     padding-left: 10px;
+    color: white;
 }
   
 form div > input::placeholder, form div > textarea::placeholder {

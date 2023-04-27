@@ -232,6 +232,7 @@ form div:last-child {
 
 .textarea{
     width: 99%;
+    color: white;
 }
 
 .bp-submit > button{

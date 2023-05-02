@@ -306,3 +306,12 @@ header{
 .time-com{
     margin: 16px;
 }
+
+.stat{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+}
+
+.user-count, .post-count, .com-count{
+    margin-left: 30px;
+}

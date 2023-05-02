@@ -15,6 +15,7 @@ require 'template/header-conn-temp.php'; ?>
     }
 </style>
 <?php
+require 'template/statistique.php';
 require 'template/all-post.php';
 require 'template/footer-temp.php';
 ?>

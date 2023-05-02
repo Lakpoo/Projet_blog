@@ -5,6 +5,7 @@ if (isset($_SESSION['is-connected']) && $_SESSION['is-connected']) {
 }
 else{
     require 'pages/template/header-disc-temp.php';
+    require 'pages/template/statistique.php';
     require 'pages/template/all-post.php';
     require 'pages/template/footer-temp.php';
 }
